@@ -1,0 +1,133 @@
+/* Reset basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* General layout */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: white;
+    padding: 20px;
+}
+
+.calculator {
+    background-color: black;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 350px;
+}
+
+/* Display screen */
+.calc-display {
+    width: 100%;
+    height: 60px;
+    border: none;
+    background-color: #f0f0f0;
+    text-align: right;
+    padding: 15px;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+/* Button layout */
+.calc-buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+/* Buttons styling */
+button {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    font-size: 1.2rem;
+    background-color: grey;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+button:hover {
+    background-color: #357ABD;
+}
+
+button:active {
+    background-color: #2E589A;
+}
+
+/* Equals button */
+.equal-btn {
+    background-color: orange;
+    color: black;
+}
+
+.equal-btn:hover {
+    background-color: #ffa500;
+}
+
+.equal-btn:active {
+    background-color: #e69500;
+}
+
+/* Wide button (e.g., 0 button) */
+button:nth-child(19) {
+    grid-column: span 2;
+    width: 100%;
+    aspect-ratio: auto;
+    border-radius: 40px;
+}
+
+/* Additional button style */
+.equalg-btn {
+    background-color: #191923;
+    color: black;
+}
+
+.equalg-btn:hover,
+.equalg-btn:active {
+    background-color: #191923;
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+    .calculator {
+        padding: 15px;
+    }
+
+    .calc-display {
+        height: 50px;
+        font-size: 1.2rem;
+        padding: 10px;
+    }
+
+    button {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .calculator {
+        padding: 10px;
+    }
+
+    .calc-display {
+        height: 45px;
+        font-size: 1rem;
+        padding: 8px;
+    }
+
+    button {
+        font-size: 0.9rem;
+    }
+}
